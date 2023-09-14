@@ -114,7 +114,7 @@ class MailgunAdmin extends LeftAndMain implements PermissionProvider
         }
     }
 
-    public function index($request)
+    public function index($request): \SilverStripe\Control\HTTPResponse
     {
         return parent::index($request);
     }
