@@ -98,8 +98,8 @@ class MailgunSwiftTransport implements Swift_Transport
      * @return int Number of messages sent
      */
     public function send(
-        Swift_Mime_SimpleMessage $message,
-        &$failedRecipients = null
+        Swift_Mime_SimpleMessage|\Swift_Mime_Message $message,
+                                                     &$failedRecipients = null
     ) {
         $this->resultApi = null;
         if ($event = $this->eventDispatcher->createSendEvent($this, $message)) {
